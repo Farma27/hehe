@@ -22,6 +22,9 @@
         }
     </script>
 
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
     <!-- FullpageJS -->
     <link rel="stylesheet" href="./dist/fullpage.min.css">
     <script type="text/javascript" src="./dist/fullpage.min.js"></script>
@@ -34,19 +37,23 @@
 
 <body class="bg-fixed bg-center bg-cover" style="background-image: url(./assets/prambanan_bg.png);">
 
+    <div class="h-screen flex flex-wrap place-content-center bg-white" id="loading">
+        <img src="./assets/prambanan_vector.png" class="animate-pulse object-cover size-80 z-50">
+    </div>
+
     <div id="fullpage">
         <div id="fp-nav" class="fp-bottom">
             <ul class="list-none" id="menu">
-                <li data-menuanchor="Home"><a href="#Home" class="active">Home</a></li>
-                <li data-menuanchor="About"><a href="#About">About</a></li>
-                <li data-menuanchor="Candi"><a href="#Candi">Candi</a></li>
+                <li data-menuanchor="Home"><a href="#Home" class="active"></a></li>
+                <li data-menuanchor="About"><a href="#About"></a></li>
+                <li data-menuanchor="Candi"><a href="#Candi"></a></li>
             </ul>
         </div>
 
         <div class="section">
             <div class="h-screen justify-center content-center">
                 <div class="grid grid-cols-1 justify-center content-center">
-                    <p class="text-center text-white font-lobster font-bold text-8xl drop-shadow-3xl shadow-black">Candi Prambanan</p>
+                    <p class="text-center text-white font-lobster font-bold text-6xl md:text-8xl drop-shadow-3xl shadow-black" id="title">Candi Prambanan</p>
                 </div>
             </div>
         </div>
@@ -55,22 +62,20 @@
             <div class="bg-white/25 backdrop-blur-md h-screen p-4 sm:p-12">
                 <div class="slide">
                     <div class="mx-20 text-center">
-                        <div class="font-lobster font-bold text-6xl text-black tracking-tight">Candi Prambanan</div>
-                        <p class="mt-4 leading-7 font-bold text-xl">Candi Prambanan (bahasa Jawa: ꦕꦟ꧀ꦝꦶ​ꦥꦿꦩ꧀ꦧꦤꦤ꧀) adalah bangunan candi bercorak agama Hindu terbesar di Indonesia yang dibangun pada abad ke-9 Masehi. Candi yang juga disebut sebagai Rara Jonggrang ini dipersembahkan untuk Trimurti, tiga dewa utama Hindu yaitu dewa Brahma sebagai dewa pencipta, dewa Wisnu sebagai dewa pemelihara, dan dewa Siwa sebagai dewa pemusnah.</p>
+                        <div class="font-lobster font-bold text-2xl md:text-6xl text-black tracking-tight">Candi Prambanan</div>
+                        <p class="mt-4 leading-7 font-bold text-xs md:text-xl">Candi Prambanan (bahasa Jawa: ꦕꦟ꧀ꦝꦶ​ꦥꦿꦩ꧀ꦧꦤꦤ꧀) adalah bangunan candi bercorak agama Hindu terbesar di Indonesia yang dibangun pada abad ke-9 Masehi. Candi yang juga disebut sebagai Rara Jonggrang ini dipersembahkan untuk Trimurti, tiga dewa utama Hindu yaitu dewa Brahma sebagai dewa pencipta, dewa Wisnu sebagai dewa pemelihara, dan dewa Siwa sebagai dewa pemusnah.</p>
                     </div>
                 </div>
                 <div class="slide">
                     <div class="mx-20 text-center">
-                        <div class="font-lobster font-bold text-6xl text-black tracking-tight">Candi Prambanan</div>
-                        <div class="mt-1 font-bold text-2xl">Etimologi</div>
-                        <p class="mt-4 leading-7 font-bold text-xl">Candi Prambanan memiliki nama yang kaya makna. Nama "Prambanan" diduga berasal dari bahasa Jawa Kuno "Para Brahman" yang berarti "Brahman Agung", merujuk pada dewa tertinggi dalam agama Hindu. Nama lain candi ini, "Siwagrha" atau "Siwalaya" dalam bahasa Sanskerta, berarti "Rumah Siwa" atau "Alam Siwa", menunjukkan dewa Siwa sebagai dewa utama yang dipuja. Candi ini memiliki tiga candi utama yang memuliakan Trimurti (Brahma, Siwa, dan Wisnu), namun Siwa Mahadewa yang menempati ruang utama Candi Siwa menjadi dewa yang paling dimuliakan.</p>
+                        <div class="mt-1 font-lobster font-bold text-xl md:text-2xl">Etimologi</div>
+                        <p class="mt-4 leading-7 font-bold text-xs md:text-xl">Candi Prambanan memiliki nama yang kaya makna. Nama "Prambanan" diduga berasal dari bahasa Jawa Kuno "Para Brahman" yang berarti "Brahman Agung", merujuk pada dewa tertinggi dalam agama Hindu. Nama lain candi ini, "Siwagrha" atau "Siwalaya" dalam bahasa Sanskerta, berarti "Rumah Siwa" atau "Alam Siwa", menunjukkan dewa Siwa sebagai dewa utama yang dipuja. Candi ini memiliki tiga candi utama yang memuliakan Trimurti (Brahma, Siwa, dan Wisnu), namun Siwa Mahadewa yang menempati ruang utama Candi Siwa menjadi dewa yang paling dimuliakan.</p>
                     </div>
                 </div>
                 <div class="slide">
                     <div class="mx-20 text-center">
-                        <div class="font-lobster font-bold text-6xl text-black tracking-tight">Candi Prambanan</div>
-                        <div class="mt-1 font-bold text-2xl">Sejarah Pembangunan</div>
-                        <p class="mt-4 leading-7 font-bold text-xl">Candi Prambanan merupakan candi Hindu terbesar dan termegah di Jawa kuno, dibangun oleh Rakai Pikatan sebagai tandingan Candi Borobudur dan Candi Sewu. Candi ini didedikasikan untuk dewa Siwa dan dibangun dalam beberapa tahap oleh Rakai Pikatan, Raja Lokapala, dan Raja Dyah Balitung Maha Sambu. Candi ini menandakan kembalinya dominasi Hindu di Jawa setelah sebelumnya dikuasai Buddha. Kompleks candi ini terus diperluas dan disempurnakan oleh raja-raja Medang Mataram selanjutnya, dan pada masa kejayaannya menjadi pusat keagamaan dan tempat berbagai upacara penting kerajaan.</p>
+                        <div class="mt-1 font-lobster font-bold text-xl md:text-2xl">Sejarah Pembangunan</div>
+                        <p class="mt-4 leading-7 font-bold text-xs md:text-xl">Candi Prambanan merupakan candi Hindu terbesar dan termegah di Jawa kuno, dibangun oleh Rakai Pikatan sebagai tandingan Candi Borobudur dan Candi Sewu. Candi ini didedikasikan untuk dewa Siwa dan dibangun dalam beberapa tahap oleh Rakai Pikatan, Raja Lokapala, dan Raja Dyah Balitung Maha Sambu. Candi ini menandakan kembalinya dominasi Hindu di Jawa setelah sebelumnya dikuasai Buddha. Kompleks candi ini terus diperluas dan disempurnakan oleh raja-raja Medang Mataram selanjutnya, dan pada masa kejayaannya menjadi pusat keagamaan dan tempat berbagai upacara penting kerajaan.</p>
                     </div>
                 </div>
             </div>
@@ -79,23 +84,26 @@
         <div class="section">
             <div class="bg-white/25 backdrop-blur-md h-screen p-4 sm:p-8">
                 <div class="mx-20 text-center">
-                    <div class="mb-4 font-bold text-2xl">Kompleks Candi</div>
-                    <div class="grid grid-cols-3 gap-4">
-                        <div class="grid gap-2 bg-white p-4 rounded-lg border-2 border-slate-700 shadow-3xl shadow-black content-between transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300">
+                    <div class="mb-4 font-lobster font-bold text-2xl">Kompleks Candi</div>
+                    <div class="grid md:grid-cols-3 grid-rows-1 gap-4 justify-center">
+                        <div class="md:hidden">
+                            <a href="https://wikipedia.org/wiki/Candi_Prambanan#Kompleks_candi" class="no-underline hover:underline text-black text-center font-bold">Klik disini!</a>
+                        </div>
+                        <div class="portrait:hidden grid gap-1 md:gap-2 bg-white p-4 rounded-lg border-2 border-slate-700 shadow-3xl shadow-black content-between transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300">
                             <div class="h-fit">
-                                <img src="./assets/candi_siwa.jpg" class="object-contain rounded-lg hover:object-scale-down">
+                                <img src="./assets/candi_siwa.jpg" class="object-contain rounded-lg">
                             </div>
                             <p class="font-lobster font-bold text-4xl text-black tracking-tight self-end">Candi Siwa</p>
                         </div>
-                        <div class="grid gap-2 bg-white p-4 rounded-lg border-2 border-slate-700 shadow-3xl shadow-black content-between transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300">
+                        <div class="portrait:hidden grid gap-2 bg-white p-4 rounded-lg border-2 border-slate-700 shadow-3xl shadow-black content-between transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300">
                             <div class="h-fit">
-                                <img src="./assets/candi_wahana.jpg" class="object-contain rounded-lg hover:object-scale-down">
+                                <img src="./assets/candi_wahana.jpg" class="object-contain rounded-lg">
                             </div>
                             <p class="font-lobster font-bold text-4xl text-black tracking-tight self-end">Candi Wahana</p>
                         </div>
-                        <div class="grid gap-2 bg-white p-4 rounded-lg border-2 border-slate-700 shadow-3xl shadow-black content-between transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300">
+                        <div class="portrait:hidden grid gap-2 bg-white p-4 rounded-lg border-2 border-slate-700 shadow-3xl shadow-black content-between transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-300">
                             <div class="h-fit">
-                                <img src="./assets/candi_perwara.jpg" class="object-contain rounded-lg hover:object-scale-down">
+                                <img src="./assets/candi_perwara.jpg" class="object-contain rounded-lg">
                             </div>
                             <p class="font-lobster font-bold text-4xl text-black tracking-tight self-end">Candi Perwara</p>
                         </div>
@@ -106,19 +114,37 @@
     </div>
 
     <script>
-        new fullpage('#fullpage', {
-            // Navigation
-            menu: '#menu',
-            lockAnchors: false,
-            anchors: ['Home', 'About', 'Candi'],
-            navigation: true,
-            navigationPosition: 'right',
-            navigationTooltips: ['Home', 'About', 'Candi'],
+        $(document).ready(function() {
+            $('#fullpage').fullpage({
+                // Navigation
+                menu: '#menu',
+                lockAnchors: false,
+                anchors: ['Home', 'About', 'Candi'],
+                navigation: true,
+                navigationPosition: 'right',
+                navigationTooltips: ['Home', 'About', 'Candi'],
+                slidesNavigation: false,
+                slidesNavPosition: 'Bottom',
 
-            autoScrolling: true,
-            scrollHorizontally: true,
+                // Scrolling
+                autoScrolling: true,
+                scrollHorizontally: true,
 
-            credits: { enabled: false, label: 'Made by Farma', position: 'right'},
+                // Accessibility
+                recordHistory: false,
+
+                // Design
+                controlArrowsHTML: [
+                    '<div class="fp-arrow mx-8"></div>', 
+                    '<div class="fp-arrow mx-8"></div>'
+                ],
+
+                credits: { enabled: false, label: 'Made by Farma', position: 'right'},
+            });
+        });
+
+        $(window).on('load', function() {
+            $('#loading').delay(3000).fadeOut(1000);
         });
     </script>
 </body>
